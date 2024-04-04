@@ -1,16 +1,117 @@
-@import 'variables';
+@import "variables";
 
 body {
-  background: url('../../dist/images/park.jpg') center/cover;
+  @include fontStyles(200);
   height: 100vh;
   width: 100%;
+  margin: 0;
 }
 
 nav {
-  // Example of using a variable:
+  @include fontStyles(600);
   background-color: $secondary-accent-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+.links {
+  color: $secondary-font-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  list-style: none;
+  margin-right: 30px;
 }
 
 .dog-icon {
   width: 50px;
+  height: 50px;
+  margin-left: 40px;
+}
+
+.introduction {
+  background: url("../../dist/images/park.jpg") center/cover;
+  background-size: 120%;
+  background-position: center 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+h1 {
+  color: $primary-font-color;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: small;
+}
+
+.main-dog-pic {
+  @include makeCirclePhoto($border-color, 2px, 350px);
+  margin-bottom: 20px;
+}
+
+.button {
+  @include fontStyles(600);
+  @include buttonStyle(5px, $border-color, 20px);
+}
+
+.dog-content {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  height: 650px;
+}
+
+.dog-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 25px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.secondary-dog-pics {
+  @include makeCirclePhoto($border-color, 2px, 250px);
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  @include fontStyles(600);
+  font-size: medium;
+  text-align: center;
+}
+
+.social-media-links {
+  background-color: $main-accent-color;
+  color: $secondary-font-color;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-quicklinks {
+  width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+a {
+  color: $secondary-font-color;
+  font-weight: 500;
 }
