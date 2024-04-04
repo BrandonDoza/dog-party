@@ -1,2 +1,28 @@
-$main-accent-color: #3F8DA8;
-$secondary-accent-color: #92E0E5;
+$main-accent-color: #3f8da8;
+$secondary-accent-color: #92e0e5;
+$primary-font-color: #3d3a39;
+$secondary-font-color: #f3fcfd;
+$border-color: #3f8da7;
+
+@mixin fontStyles($weight) {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+@mixin makeCirclePhoto($color, $borderWidth, $size) {
+  border: $borderWidth solid $color;
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+}
+
+@mixin buttonStyle($width, $color, $margin) {
+  background-color: #ffffff;
+  border: $width solid $color;
+  color: $color;
+  margin-top: $margin;
+  width: 170px;
+  height: 45px;
+}
